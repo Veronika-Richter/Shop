@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeTest;
 import pages.HomePage;
 import pages.UserAccountPage;
 import pages.UserAuthenticationPage;
+import utils.CapabilitiesGenerator;
 
 
 public class BaseTest {
@@ -19,8 +20,9 @@ public class BaseTest {
 
     @BeforeTest(alwaysRun = true)
     public void browserSetup() {
-        System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
-        driver = new ChromeDriver();
+        //System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
+        //driver = new ChromeDriver();
+        driver = new ChromeDriver(CapabilitiesGenerator.getChromeOptions());
     }
 
     @BeforeMethod(alwaysRun = true)
