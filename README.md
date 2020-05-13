@@ -1,8 +1,8 @@
-SignIn
-Add some to cart
-Add to wishlists
-go to Cart
-buy
-change account information
-add address
-SignOut
+1) SignIn
+2) Add some to cart
+3) Add to wishlists
+4) go to Cart
+5) buy
+6) change account information
+7) add address
+8) SignOut
