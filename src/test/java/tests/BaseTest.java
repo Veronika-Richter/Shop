@@ -18,9 +18,15 @@ public class BaseTest {
     protected UserAuthenticationPage userAuthenticationPage;
     protected UserAccountPage userAccountPage;
 
+    @BeforeTest(alwaysRun = true)
+    public void browserSetup() {
+        //System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/chromedriver.exe");
+        //driver = new ChromeDriver();
+        driver = new ChromeDriver(CapabilitiesGenerator.getChromeOptions());
+    }
+
     @BeforeMethod(alwaysRun = true)
     public void accountLogin() {
-        driver = new ChromeDriver(CapabilitiesGenerator.getChromeOptions());
         homePage = new HomePage(driver);
         userAuthenticationPage = new UserAuthenticationPage(driver);
         userAccountPage = new UserAccountPage(driver);
